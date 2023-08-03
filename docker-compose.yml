@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  jupyter-lab:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      volumes:
+        - .:/home/jovyan/work/
+      ports:
+        - "8888:8888"
+      container_name: jupyter-lab-container
